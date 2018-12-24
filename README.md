@@ -9,6 +9,10 @@ rm -rf ~/.tmux ~/.tmux.conf
 git clone --recurse-submodules https://github.com/jethrodaniel/.tmux ~/.tmux
 ln -s ~/.tmux/conf ~/.tmux.conf
 ```
+Then
+
+1. Replace your normal terminal shortcut (<kbd>ctrl</kbd>+<kbd>shift</kbd>+<kbd>t</kbd> on Ubuntu) with `gnome-terminal --full-screen -e tmux`
+2. Be sure to initalize [tpm](https://github.com/tmux-plugins/tpm) by typing <kbd>ctrl</kbd>+<kbd>f</kbd>+<kbd>I</kbd> inside a tmux session (be patient), then restarting tmux.
 
 ### Updating
 
