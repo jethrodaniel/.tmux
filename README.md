@@ -40,3 +40,12 @@ Tmux plugins used:
 * [resurrect](https://github.com/tmux-plugins/tmux-resurrect)
 * [sensible](https://github.com/tmux-plugins/tmux-sensible)
 
+### Tab completion
+
+To enable Bash tab completion for tmux, add the following lines to your `~/.bashrc`
+
+```
+if [ -f ~/.tmux/bash_completion_tmux.sh ]; then
+  . ~/.tmux/bash_completion_tmux.sh
+fi
+```
