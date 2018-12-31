@@ -22,8 +22,7 @@ _tmux_expand ()
 
 _tmux_filedir ()
 {
-    local IFS='
-';
+    local IFS='';
     _tmux_expand || return 0;
     if [ "$1" = -d ]; then
         COMPREPLY=(${COMPREPLY[@]} $( compgen -d -- $cur ));
