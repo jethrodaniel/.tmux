@@ -69,6 +69,8 @@ set -g @sidebar-tree 'e'                   # `prefix e` to open
 set -g @sidebar-tree-focus 'w'             # `prefix w` to open and select
 set -g @sidebar-tree-position 'right'      # Open on the right side
 
+set -g @plugin 'tmux-plugins/tmux-pain-control' # Sensible pane shortcuts
+
 set -g status-right "web:#{online_status} batt: #{battery_percentage} | #(date '+%m-%d-%Y'), %H:%M"
 
 # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
