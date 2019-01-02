@@ -51,20 +51,25 @@ bind-key -T copy-mode-vi y send-keys -X copy-selection
 bind-key -T copy-mode-vi r send-keys -X rectangle-toggle
 
 #----------  Tmux Plugin Manager ------------------------#
-# Plugins
 set -g @plugin 'tmux-plugins/tpm'
-set -g @plugin 'tmux-plugins/tmux-sensible'
-set -g @plugin 'tmux-plugins/tmux-online-status'
-set -g @plugin 'tmux-plugins/tmux-battery'
-set -g @plugin 'tmux-plugins/tmux-resurrect'
-set -g @resurrect-processes 'false'
-set -g @plugin 'tmux-plugins/tmux-open'
-set -g @plugin 'tmux-plugins/tmux-yank'
 
-# Configure Plugins
+set -g @plugin 'tmux-plugins/tmux-sensible'      # Better defaults
+set -g @plugin 'tmux-plugins/tmux-online-status' # Show online status
+set -g @plugin 'tmux-plugins/tmux-battery'       # Show battery status
+
+set -g @plugin 'tmux-plugins/tmux-open' # Open highlighted text in copy-mode
+set -g @plugin 'tmux-plugins/tmux-yank' # Use system clipboard in copy-mode
+
+set -g @plugin 'tmux-plugins/tmux-resurrect' # Restore tmux after shutdowns
+set -g @resurrect-processes 'false'          # Don't try to restore processes
+
+set -g @plugin 'tmux-plugins/tmux-sidebar' # IDE-like pane
+set -g @sidebar-tree-command 'tree -C'     # that shows the current directory
+set -g @sidebar-tree 'e'                   # `prefix e` to open
+set -g @sidebar-tree-focus 'w'             # `prefix w` to open and select
+set -g @sidebar-tree-position 'right'      # Open on the right side
+
 set -g status-right "web:#{online_status} batt: #{battery_percentage} | #(date '+%m-%d-%Y'), %H:%M"
 
 # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
 run '~/.tmux/plugins/tpm/tpm'
-
-run-shell ~/clone/path/open.tmux
