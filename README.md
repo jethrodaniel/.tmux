@@ -17,7 +17,7 @@ Then
 ### Updating
 
 ```
-( cd ~/.tmux && git submodule foreach git checkout master && git pull )
+( cd ~/.tmux && git pull && git submodule foreach git checkout master && git pull )
 ```
 
 ### What it do
@@ -35,10 +35,14 @@ tmux 2.6
 
 Tmux plugins used:
 * [battery](https://github.com/tmux-plugins/tmux-battery)
+* [fingers](https://github.com/Morantron/tmux-fingers)
 * [online-status](https://github.com/tmux-plugins/tmux-online-status)
 * [open](https://github.com/tmux-plugins/tmux-open)
+* [pain-control](https://github.com/tmux-plugins/tmux-pain-control)
 * [resurrect](https://github.com/tmux-plugins/tmux-resurrect)
 * [sensible](https://github.com/tmux-plugins/tmux-sensible)
+* [sidebar](https://github.com/tmux-plugins/tmux-sidebar)
+* [yank](https://github.com/tmux-plugins/tmux-yank)
 
 ### Tab completion
 
@@ -48,4 +52,19 @@ To enable Bash tab completion for tmux, add the following lines to your `~/.bash
 if [ -f ~/.tmux/bash_completion_tmux.sh ]; then
   . ~/.tmux/bash_completion_tmux.sh
 fi
+```
+
+The following lines will get you tab completion in tmux even if you're not using the rest of these settings
+
+```
+mkdir -p ~/.tmux
+curl https://raw.githubusercontent.com/jethrodaniel/.tmux/master/bash_completion_tmux.sh > ~/.tmux/bash_completion_tmux.sh
+
+cat << TMUX_TABS >> ~/.bashrc
+if [ -f ~/.tmux/bash_completion_tmux.sh ]; then
+  . ~/.tmux/bash_completion_tmux.sh
+fi
+TMUX_TABS
+
+. ~/.bashrc
 ```
