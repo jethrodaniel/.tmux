@@ -9,10 +9,7 @@ rm -rf ~/.tmux ~/.tmux.conf
 git clone --recurse-submodules https://github.com/jethrodaniel/.tmux ~/.tmux
 ln -s ~/.tmux/conf ~/.tmux.conf
 ```
-Then
-
-1. Replace your normal terminal shortcut (<kbd>ctrl</kbd>+<kbd>shift</kbd>+<kbd>t</kbd> on Ubuntu) with `gnome-terminal --full-screen -e tmux`
-2. Be sure to initalize [tpm](https://github.com/tmux-plugins/tpm) by typing <kbd>ctrl</kbd>+<kbd>f</kbd>+<kbd>I</kbd> inside a tmux session (be patient), then restarting tmux.
+Then be sure to initalize [tpm](https://github.com/tmux-plugins/tpm) by typing <kbd>ctrl</kbd>+<kbd>f</kbd>+<kbd>I</kbd> inside a tmux session (be patient), then restarting tmux.
 
 ### Updating
 
@@ -35,6 +32,7 @@ tmux 2.6
 
 Tmux plugins used:
 * [battery](https://github.com/tmux-plugins/tmux-battery)
+* [continuum](https://github.com/tmux-plugins/tmux-continuum)
 * [fingers](https://github.com/Morantron/tmux-fingers)
 * [online-status](https://github.com/tmux-plugins/tmux-online-status)
 * [open](https://github.com/tmux-plugins/tmux-open)
@@ -46,7 +44,7 @@ Tmux plugins used:
 
 ### Tab completion
 
-To enable Bash tab completion for tmux, add the following lines to your `~/.bashrc`
+To enable Bash tab completion for tmux, add the following to your `~/.bashrc`
 
 ```
 if [ -f ~/.tmux/bash_completion_tmux.sh ]; then

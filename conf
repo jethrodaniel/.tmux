@@ -45,6 +45,7 @@ bind -n M-H resize-pane -L 5
 bind -n M-l resize-pane -R 5
 
 # copy-mode shortcuts
+bind P paste-buffer
 bind-key -T copy-mode-vi v send-keys -X begin-selection
 bind-key -T copy-mode-vi y send-keys -X copy-selection
 bind-key -T copy-mode-vi r send-keys -X rectangle-toggle
@@ -62,7 +63,11 @@ set -g @open-S 'https://www.google.com/search?q='
 set -g @plugin 'tmux-plugins/tmux-yank' # Use system clipboard in copy-mode
 
 set -g @plugin 'tmux-plugins/tmux-resurrect' # Restore tmux after shutdowns
+set -g @resurrect-capture-pane-contents 'on' # Restore pane contents
+set -g @resurrect-save-shell-history 'on'    # Restore shell history per pane
 set -g @resurrect-processes 'false'          # Don't try to restore processes
+set -g @plugin 'tmux-plugins/tmux-continuum' # Save and auto restore
+set -g @continuum-restore 'on'
 
 set -g @plugin 'tmux-plugins/tmux-sidebar' # IDE-like pane
 set -g @sidebar-tree-command 'tree -C'     # that shows the current directory
