@@ -64,7 +64,7 @@ set -g @plugin 'tmux-plugins/tmux-yank' # Use system clipboard in copy-mode
 
 set -g @plugin 'tmux-plugins/tmux-resurrect' # Restore tmux after shutdowns
 set -g @resurrect-capture-pane-contents 'on' # Restore pane contents
-set -g @resurrect-save-shell-history 'on'    # Restore shell history per pane
+set -g @resurrect-save-shell-history 'off'   # Don't restore shell history per pane
 set -g @resurrect-processes 'false'          # Don't try to restore processes
 set -g @plugin 'tmux-plugins/tmux-continuum' # Save and auto restore
 set -g @continuum-restore 'on'
