@@ -23,26 +23,10 @@ set -g status-attr bright
 # Set tmux to vi mode
 set-window-option -g mode-keys vi
 
-# Use vi-style pane switching
-bind k select-pane -U
-bind j select-pane -D
-bind l select-pane -R
-bind h select-pane -L
-
 # Use C-f instead of the default C-b
 set -g prefix C-f
 unbind C-b
 bind C-f send-prefix
-
-# Send the prefix to a tmux client inside a tmux session
-bind-key f send-prefix
-
-# Resize the current pane using Alt + direction
-bind -n M-k resize-pane -U 5
-bind -n M-j resize-pane -D 5
-# H instead of h because M-h triggers window help, by default
-bind -n M-H resize-pane -L 5
-bind -n M-l resize-pane -R 5
 
 # copy-mode shortcuts
 bind P paste-buffer
@@ -66,8 +50,6 @@ set -g @plugin 'tmux-plugins/tmux-resurrect' # Restore tmux after shutdowns
 set -g @resurrect-capture-pane-contents 'on' # Restore pane contents
 set -g @resurrect-save-shell-history 'off'   # Don't restore shell history per pane
 set -g @resurrect-processes 'false'          # Don't try to restore processes
-set -g @plugin 'tmux-plugins/tmux-continuum' # Save and auto restore
-set -g @continuum-restore 'on'
 
 set -g @plugin 'tmux-plugins/tmux-sidebar' # IDE-like pane
 set -g @sidebar-tree-command 'tree -C'     # that shows the current directory
