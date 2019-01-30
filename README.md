@@ -35,6 +35,7 @@ tmux 2.6
 Tmux plugins used:
 * [battery](https://github.com/tmux-plugins/tmux-battery)
 * [fingers](https://github.com/Morantron/tmux-fingers)
+* [kill_em_all](https://github.com/jethrodaniel/kill_em_all)
 * [online-status](https://github.com/tmux-plugins/tmux-online-status)
 * [open](https://github.com/tmux-plugins/tmux-open)
 * [pain-control](https://github.com/tmux-plugins/tmux-pain-control)

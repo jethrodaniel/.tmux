@@ -62,6 +62,8 @@ set -g @plugin 'tmux-plugins/tmux-pain-control' # Sensible pane shortcuts
 set -g @plugin 'Morantron/tmux-fingers' # Vimium-like hints
 set -g @fingers-copy-command-uppercase 'xargs xdg-open'
 
+set -g @plugin 'jethrodaniel/kill_em_all' # To easily kill pesky sessions
+
 set -g status-right "web:#{online_status} batt: #{battery_percentage} | #(date '+%m-%d-%Y'), %H:%M"
 
 # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
