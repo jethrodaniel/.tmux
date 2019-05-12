@@ -24,7 +24,10 @@ set -g status-fg "#87AFAF" # Light blue
 # Set tmux to vi mode
 set-window-option -g mode-keys vi
 
-# Use C-f instead of the default C-b
+# use vi-style key bindings in the status line
+set -g status-keys vi
+
+# Use ^f as the prefix
 set -g prefix C-f
 unbind C-b
 bind C-f send-prefix
