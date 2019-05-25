@@ -2,6 +2,15 @@
 
 tmux settings and plugins
 
+## Requirements
+
+You need tmux version 2 or greater:
+
+```
+$ tmux -V
+tmux 2.6
+```
+
 ### Installation
 
 ```
@@ -9,6 +18,7 @@ rm -rf ~/.tmux ~/.tmux.conf
 git clone --recurse-submodules https://github.com/jethrodaniel/.tmux ~/.tmux
 ln -s ~/.tmux/conf ~/.tmux.conf
 ```
+
 Then be sure to initalize [tpm](https://github.com/tmux-plugins/tpm) by typing <kbd>prefix</kbd>+<kbd>I</kbd> inside a tmux session (be patient), then restarting tmux.
 
 ### Updating
@@ -19,18 +29,9 @@ Then be sure to initalize [tpm](https://github.com/tmux-plugins/tpm) by typing <
 
 ### What it do
 
-Tmux, by default, is ugly. But a little work, and suddenly it's beautiful.
-
-<kbd>prefix</kbd> is set to <kbd>ctrl</kbd>+<kbd>f</kbd>
-
-Plugins are handled by [tpm](https://github.com/tmux-plugins/tpm).
-
-You need tmux version 2 or greater:
-
-```
-$ tmux -V
-tmux 2.6
-```
+- <kbd>prefix</kbd> is set to <kbd>ctrl</kbd>+<kbd>f</kbd>
+- some basic theme change
+- plugin integration with [tpm](https://github.com/tmux-plugins/tpm)
 
 Tmux plugins used:
 * [battery](https://github.com/tmux-plugins/tmux-battery)
