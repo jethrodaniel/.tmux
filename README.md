@@ -45,6 +45,14 @@ Tmux plugins used:
 * [sidebar](https://github.com/tmux-plugins/tmux-sidebar)
 * [yank](https://github.com/tmux-plugins/tmux-yank)
 
+## Useful tmux commands
+
+Too lazy to type, but the `man` page is pretty good, actually
+
+```
+man tmux | grep --color=never -A61 "The default command key bindings are" 2>/dev/null
+```
+
 ### Tab completion
 
 To enable Bash tab completion for tmux, add the following to your `~/.bashrc`
