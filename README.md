@@ -77,3 +77,19 @@ TMUX_TABS
 
 . ~/.bashrc
 ```
+
+### Halp, I tried to zoom and things broke!
+
+Here's a weird thing that happens in case you start your shell with tmux as
+the command to run, for example, like `gnome-terminal -e tmux`:
+
+Try zooming a tmux pane with <kbd>prefix</kbd>+<kbd>z</kbd>, but **keep**
+holding down <kbd>ctrl</kbd> when you press <kbd>z</kbd>.
+
+Stuck in a black screen, and can't seem to get out of it?
+
+That's because the <kbd>ctrl</kbd><kbd>z</kbd> backgrounded the current
+process, which was `tmux`, and since you started from `tmux`, not your shell,
+you can't just `fg` back.
+
+So in another terminal, use `pkill -cont tmux`, which will `fg` that for you.
