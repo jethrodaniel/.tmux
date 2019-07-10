@@ -62,12 +62,6 @@ set -g @resurrect-capture-pane-contents 'on' # Restore pane contents
 set -g @resurrect-save-shell-history 'off'   # Don't restore shell history per pane
 set -g @resurrect-processes 'false'          # Don't try to restore processes
 
-set -g @plugin 'tmux-plugins/tmux-sidebar' # IDE-like pane
-set -g @sidebar-tree-command 'tree -C'     # that shows the current directory
-set -g @sidebar-tree 'e'                   # `prefix e` to open
-set -g @sidebar-tree-focus 'w'             # `prefix w` to open and select
-set -g @sidebar-tree-position 'right'      # Open on the right side
-
 set -g @plugin 'tmux-plugins/tmux-pain-control' # Sensible pane shortcuts
 
 set -g @plugin 'Morantron/tmux-fingers' # Vimium-like hints
