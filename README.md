@@ -1,5 +1,8 @@
 # .tmux
 
+![](https://img.shields.io/github/license/jethrodaniel/.tmux.svg)
+
+
 tmux settings and plugins
 
 ## Requirements
