@@ -44,6 +44,7 @@ Tmux plugins used:
 * [open](https://github.com/tmux-plugins/tmux-open)
 * [pain-control](https://github.com/tmux-plugins/tmux-pain-control)
 * [resurrect](https://github.com/tmux-plugins/tmux-resurrect)
+- [continuum](https://github.com/tmux-plugins/tmux-continuum)
 * [sensible](https://github.com/tmux-plugins/tmux-sensible)
 * [sidebar](https://github.com/tmux-plugins/tmux-sidebar)
 * [yank](https://github.com/tmux-plugins/tmux-yank)
