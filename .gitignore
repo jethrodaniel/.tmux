@@ -3,3 +3,6 @@ plugins
 
 # From tmux resurrect
 resurrect
+
+!third_party/tmux
+third_party/
