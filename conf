@@ -5,22 +5,6 @@
 # (_)__|_| |_| |_|\__,_/_/\_(_)___\___/|_| |_|_|
 #
 
-#----------  Theme ------------------------#
-
-# Needed to support italics
-set -g default-terminal 'tmux-256color'
-
-set -g pane-border-style "fg=#3A3A3A" # Light-grey
-set -g pane-active-border-style "fg=#D75F5F" # Pink
-
-#----------  Status bar ------------------------#
-set -g status-left-length 32 # Padding
-set -g status-right-length 150
-set -g status-bg default # Transparent background
-set -g status-fg "#87AFAF" # Light blue
-
-#----------  Keymaps ------------------------#
-
 # Set tmux to vi mode
 set-window-option -g mode-keys vi
 
@@ -49,13 +33,13 @@ if "test ! -d ~/.tmux/plugins/tpm" \
 set -g @plugin 'tmux-plugins/tpm'
 
 set -g @plugin 'tmux-plugins/tmux-sensible'      # Better defaults
-set -g @plugin 'tmux-plugins/tmux-online-status' # Show online status
-set -g @plugin 'tmux-plugins/tmux-battery'       # Show battery status
+# set -g @plugin 'tmux-plugins/tmux-online-status' # Show online status
+# set -g @plugin 'tmux-plugins/tmux-battery'       # Show battery status
 
-set -g @plugin 'tmux-plugins/tmux-open' # Open highlighted text in copy-mode
-set -g @open-S 'https://www.google.com/search?q='
+# set -g @plugin 'tmux-plugins/tmux-open' # Open highlighted text in copy-mode
+# set -g @open-S 'https://www.google.com/search?q='
 
-set -g @plugin 'tmux-plugins/tmux-yank' # Use system clipboard in copy-mode
+# set -g @plugin 'tmux-plugins/tmux-yank' # Use system clipboard in copy-mode
 
 set -g @plugin 'tmux-plugins/tmux-resurrect' # Restore tmux after shutdowns
 set -g @resurrect-capture-pane-contents 'on' # Restore pane contents
@@ -67,12 +51,20 @@ set -g @continuum-restore 'on'
 
 set -g @plugin 'tmux-plugins/tmux-pain-control' # Sensible pane shortcuts
 
-set -g @plugin 'Morantron/tmux-fingers' # Vimium-like hints
-set -g @fingers-copy-command-uppercase 'xargs xdg-open'
+# set -g @plugin 'Morantron/tmux-fingers' # Vimium-like hints
+# set -g @fingers-copy-command-uppercase 'xargs xdg-open'
 
 set -g @plugin 'jethrodaniel/kill_em_all' # To easily kill pesky sessions
+# set -g status-right "web:#{online_status} batt: #{battery_percentage} | #(date '+%Y-%m-%d'), %H:%M"
 
-set -g status-right "web:#{online_status} batt: #{battery_percentage} | #(date '+%m-%d-%Y'), %H:%M"
+set -g @plugin 'dracula/tmux' # Theme
+set -g @dracula-military-time "true"
+set -g @dracula-show-battery "false"
+set -g @dracula-show-network "false"
+set -g @dracula-show-weather "false"
+set -g @dracula-show-left-icon "session"
+set -g @dracula-cpu-usage "true"
+set -g @dracula-ram-usage "true"
 
 # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
 run '~/.tmux/plugins/tpm/tpm'
